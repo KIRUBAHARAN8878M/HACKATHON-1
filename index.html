@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Clone</title>
+    <link rel="icon" href="https://www.youtube.com/s/desktop/cc9e7915/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+<body>
+    
+    <nav class="navbar">
+        <div class="toggle-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <img src="./image/YTlogo.png" class="logo" alt="">
+        <div class="search-box">
+            <input type="text" class="search-bar" placeholder="search">
+            <button class="search-btn"><img src="https://img.icons8.com/ios-glyphs/344/search--v1.png" alt=""></button>
+        </div>
+        <button class="voice-btn"><img src="https://img.icons8.com/sf-ultralight-filled/344/microphone.png" alt=""></button>
+        <div class="user-options">
+            <a href="https://studio.youtube.com/channel/UCk8N5qmmZnAWUhWAOut3atA" class="create"><img src="https://img.icons8.com/external-anggara-basic-outline-anggara-putra/344/external-create-multimedia-anggara-basic-outline-anggara-putra.png" class="icon" alt=""></a>
+            <img src="https://img.icons8.com/fluency-systems-regular/344/small-icons.png" class="icon" alt="">
+            <img src="https://img.icons8.com/windows/344/appointment-reminders--v1.png" class="icon" alt="">
+            <div class="user-dp">
+                <img src="./image/YTprofileimag.jpg" alt="">
+            </div>
+        </div>
+    </nav>
+
+    <!-- sidebar -->
+    <div class="side-bar">
+        <a href="#" class="links active"><img src="https://img.icons8.com/ios-filled/344/home.png" alt="">Home</a>
+        <a href="https://www.youtube.com/feed/explore" class="links"><img src="https://img.icons8.com/external-thin-kawalan-studio/344/external-explore-social-media-thin-kawalan-studio.png" alt="">Explore</a>
+        <a href="https://www.youtube.com/shorts/S5aZE8d-1lw" class="links"><img src="https://img.icons8.com/ios/344/tiktok--v1.png" alt="">Shorts</a>
+        <a href="https://www.youtube.com/feed/subscriptions" class="links"><img src="https://img.icons8.com/ios/344/video-playlist.png" alt="">Subscriptions</a>
+        <hr class="seperator">
+        <a href="https://www.youtube.com/feed/library" class="links"><img src="https://img.icons8.com/puffy/344/experimental-video-playlist-puffy.png" alt="">Library</a>
+        <a href="https://www.youtube.com/feed/history" class="links"><img src="https://img.icons8.com/external-flatart-icons-outline-flatarticons/344/external-history-instagram-flatart-icons-outline-flatarticons.png" alt="">History</a>
+        <a href="#" class="links"><img src="https://img.icons8.com/fluency-systems-regular/344/video-clip.png" alt="">Your Video</a>
+        <a href="https://www.youtube.com/playlist?list=WL" class="links"><img src="https://img.icons8.com/material-outlined/344/clock--v1.png" alt="">Watch Later</a>
+        <a href="https://www.youtube.com/playlist?list=LL" class="links"><img src="https://img.icons8.com/external-others-anggara-putra/344/external-social-social-media-basic-others-anggara-putra-28.png" alt="">Liked Video</a>
+        <a href="#" class="links"><img src="https://img.icons8.com/external-those-icons-lineal-those-icons/344/external-down-arrows-those-icons-lineal-those-icons-1.png" alt="">Show More</a>
+        <hr class="seperator">
+        <a href="https://www.youtube.com/feed/channels" class="links"><b>SUBSCRIPTIONS</b></a>
+    </div>
+
+    <!-- filters -->
+    <div class="filters">
+        <button class="filter-options active" onclick="display('all')">all</button>
+        <button class="filter-options" onclick="display('tutorials')">tutorials</button>
+        <button class="filter-options" onclick="display('web development')">web development</button>
+        <button class="filter-options" onclick="display('python')">python</button>
+        <button class="filter-options" onclick="display('entertainment')" >entertainment</button>
+        <button class="filter-options"  onclick="display('learing')" >learning</button>
+        <button class="filter-options"  onclick="display('javascript')">javascript</button>
+        <button class="filter-options"  onclick="display('artificial intelligence')"  >artificial intelligence</button>
+        <button class="filter-options" onclick="display('machine learning')"  >machine learning</button>
+        <button class="filter-options"  onclick="display('trending')" >trending</button>
+    </div>
+
+
+    <div class="video-container">
+     
+    </div>
+
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
