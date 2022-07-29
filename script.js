@@ -1,9 +1,9 @@
 const videoCardContainer = document.querySelector('.video-container');
 
 let api_key =  "AIzaSyAf9SYaDte-KGhF1k0ItjvwR8Rf7Aseols";
-
 let video_http ="https://www.googleapis.com/youtube/v3/videos?";
 let channel_http = "https://youtube.googleapis.com/youtube/v3/channels?"
+
 
 fetch(video_http + new URLSearchParams({
     key: api_key,
@@ -23,6 +23,8 @@ fetch(video_http + new URLSearchParams({
 })
 .catch(err => console.log(err));
 
+
+
 const getChannelIcon = (video_data) =>{
     fetch(channel_http + new URLSearchParams({
            key:api_key,
@@ -37,6 +39,7 @@ const getChannelIcon = (video_data) =>{
          //console.log(video_data)
      })
  }
+
  const makeVideoCard = (data) =>{
    videoCardContainer.innerHTML += `
 <div class="video" onclick="location.href='https://youtube.com/watch?v=${data.id}'">
@@ -51,6 +54,7 @@ const getChannelIcon = (video_data) =>{
 </div> `
  }
 
+ 
 //Search Bar 
 
 const searchInput = document.querySelector('.search-bar');
@@ -66,10 +70,29 @@ searchBtn.addEventListener('click',()=>{
 
 //filterOptionsBtn 
 
-
 function display(value){
   
     if(value.length){
         location.href = searchlink + value;
     }
 }
+
+
+const subscriberCount= document.getElementById('Subscriberid');
+const viewCount = document.getElementById('views');
+const videoCount = document.getElementById('videocount');
+
+
+let getData = () => {
+    fetch(`https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${'UC_x5XG1OV2P6uZZ5FSM9Ttw'}&key=${api_key}`)
+    .then(response => {
+        return response.json()
+    })
+    .then(data => {
+        console.log(data);
+        subscriberCount.value = data["items"][0].statistics.subscriberCount;
+        viewCount.value = data["items"][0].statistics.viewCount;
+        videoCount.value = data["items"][0].statistics.videoCount;  
+    })
+}
+getData();
